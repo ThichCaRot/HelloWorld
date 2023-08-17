@@ -19,13 +19,17 @@ import org.opencv.imgcodecs.Imgcodecs;
 
 public class HelloWorld {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 		String filePath = "src/cat.jpg";
 		Mat originalImage = Imgcodecs.imread(filePath);
-		if(originalImage.dataAddr()==0){
+		if(originalImage.dataAddr()==0)
+		{
 			System.out.println("Couldn't open file " + filePath);
-		} else {
+		} 
+		else 
+		{
 			HighGui.namedWindow("image");
 			HighGui.imshow("image",originalImage);
 			HighGui.waitKey();
